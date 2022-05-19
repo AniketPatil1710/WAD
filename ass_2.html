@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Ajax</title>
+</head>
+<body>
+
+
+
+<button id="load-data" onclick="ajax1()">Click Here to Load the Data</button>
+
+
+<script>
+	
+	function ajax1(){
+
+	
+    var xml=new XMLHttpRequest();
+	
+    xml.onload= function(){
+		alert(this.responseText)
+
+    }
+
+    xml.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
+
+    xml.send();
+}
+
+</script>
+
+</body>
+</html>
